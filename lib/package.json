@@ -4,6 +4,7 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt-eslint": "^21.0.0",
+    "jquery": "^3.4.0",
     "jshint-stylish": "^2.2.1"
   },
   "devDependencies": {
