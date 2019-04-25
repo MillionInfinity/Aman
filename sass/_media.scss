@@ -318,7 +318,7 @@
         top: 25rem;
         display: grid;
         grid-gap: 2rem;
-        margin-left: 2rem;
+        margin-left: 8%;
         grid-template-columns: repeat(3, 265px);
         grid-template-areas:
             'd d d '
@@ -413,8 +413,9 @@
 
     .links {
         position: absolute;
-        top: 40rem !important;
+        top: 42rem !important;
         left: 35rem;
+        @include easeOut();
     }
 
 }
@@ -565,6 +566,7 @@
         position: absolute;
         top: 30rem !important;
         left: 45rem;
+        @include easeOut();
     }
 
 }
@@ -632,7 +634,7 @@
 
     .links {
         position: absolute;
-        top: 43rem !important;
+        top: 45rem !important;
         //  top: 30.5rem !important;
         left: 28rem;
     }
@@ -694,8 +696,9 @@
 
     .links {
         position: absolute;
-        top: 48rem !important;
+        top: 52rem !important;
         left: 28.4rem;
+        @include easeOut();
     }
 }
 
@@ -808,7 +811,7 @@
 
     h1 {
         color: rgb(255, 217, 0);
-        font-size: 3rem;
+        font-size:40px !important;
         position: relative;
         top: -30rem;
         margin-left: 2rem;
@@ -818,12 +821,13 @@
 
     h2 {
         font-family: $cursivefont;
-        font-size: -5rem;
+        font-size: 25px;
         color: rgb(226, 226, 193);
         z-index: 8px;
         position: relative;
         top: -31rem;
-        margin-left: 4.2rem;
+         left: 12rem !important;
+         margin-left: -20px !important;
     }
 
     .ver-line {

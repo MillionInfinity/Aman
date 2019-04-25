@@ -723,7 +723,7 @@ body {
     top: 25rem;
     display: grid;
     grid-gap: 2rem;
-    margin-left: 2rem;
+    margin-left: 8%;
     grid-template-columns: repeat(3, 265px);
     grid-template-areas: 'd d d ' '- e e ' 'a b c'; }
 
@@ -781,8 +781,13 @@ body {
 
   .links {
     position: absolute;
-    top: 40rem !important;
-    left: 35rem; } }
+    top: 42rem !important;
+    left: 35rem;
+    transition: all 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out; } }
 @media screen and (max-width: 768px) {
   div.colect {
     margin-top: -47rem;
@@ -887,7 +892,12 @@ body {
   .links {
     position: absolute;
     top: 30rem !important;
-    left: 45rem; } }
+    left: 45rem;
+    transition: all 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out; } }
 @media screen and (min-width: 500px) and (max-width: 767px) {
   .colect {
     margin-top: -13rem; }
@@ -924,7 +934,7 @@ body {
 
   .links {
     position: absolute;
-    top: 43rem !important;
+    top: 45rem !important;
     left: 28rem; }
 
   #bindex {
@@ -969,8 +979,13 @@ body {
 
   .links {
     position: absolute;
-    top: 48rem !important;
-    left: 28.4rem; } }
+    top: 52rem !important;
+    left: 28.4rem;
+    transition: all 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -ms-transition: all 1.5s ease-out;
+    -o-transition: all 1.5s ease-out; } }
 @media screen and (max-width: 500px) {
   #branching {
     margin-left: -6rem; }
@@ -1057,7 +1072,7 @@ body {
 
   h1 {
     color: #ffd900;
-    font-size: 3rem;
+    font-size: 40px !important;
     position: relative;
     top: -30rem;
     margin-left: 2rem;
@@ -1066,12 +1081,13 @@ body {
 
   h2 {
     font-family: "Parisienne", cursive;
-    font-size: -5rem;
+    font-size: 25px;
     color: #e2e2c1;
     z-index: 8px;
     position: relative;
     top: -31rem;
-    margin-left: 4.2rem; }
+    left: 12rem !important;
+    margin-left: -20px !important; }
 
   .ver-line {
     display: block; }
