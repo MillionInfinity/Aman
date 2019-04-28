@@ -130,8 +130,146 @@ module.exports = {
 };
 },{}],2:[function(require,module,exports){
 "use strict";
+const footer = () => {
+    let footerh = `
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">Home
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">About
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">Gallery
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">Branches
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">Countact me
+            <i class="fab fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://millioninfinity.github.io/Personal-Site/"> Million Asseghegn</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+`;
+    $("#footers").html(footerh);
+};
+
+footer();
+
+const lowerpart = () => {
+  // console.log("lower part of the page");
+  let thepart = `
+    <div class="d text-center">
+    <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
+    </div>
+    <div class="e"><img src="./imgs/logodesign.png" alt="textlogo" width="250px"></div>
+
+    <div class="a tinone"><a href="aman.html"><div class="meet"><div class="met"></div></div><p class="textAman">Meet Aman</p></a></div>
+    <div class="b tinone"><a href="#!"><div class="gal"><div class="met"></div></div><p class="textAman">Gallery</p></a></div>
+    <div class="c tinone"><a href="#!"><img src="./imgs/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
+  
+ 
+    `;
+  $(".threeIn1").html(thepart);
+};
+lowerpart();
+
+
+
+// const lowerbranch = () => {
+//     // console.log("lower part of the page");
+//     let thepart = `
+//     <div class="d text-center">
+//     <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
+//     </div>
+//     <div class="e"><img src="./../imgs/logodesign.png" alt="textlogo" width="250px"></div>
+//      `;
+//     $(".threeIn2").html(thepart);
+// };
+// lowerbranch();
+
+// $('.form-control').on('click', function (e) {
+//     e.preventDefault();
+//     $(this).css('border', '2px solid #b9b1a7');
+// });
+
+// $('.submit').on('click', function (e) {
+//     e.preventDefault();
+//     $(this).css('background-color', '#ece5e7');
+//     $(this).css('color', 'rgb(138, 135, 135)');
+// });
+
+
+// module.exports = {
+
+//     lowerpart,
+//     lowerbranch
+
+
+// };
+},{}],3:[function(require,module,exports){
+"use strict";
+console.log("biet mekeyer");
+let page =require('./nav'),
+    fetching=require('./fetch'),
+     lower=require('./footer.js');
+     // variables=require'variables.scss';
+// console.log("etl", fetching.loadOrnella);
+
+
+$(document).ready(function(){
+return page.newNav();
+});
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 100) {
+          //   $("a.nav-item").css("color", "blue");
+          //    $('a').css('color', 'red');
+        }
+         else if (scroll < 100) {
+          //     $("h1").css("color", "red");
+         }
+        else {
+            $(".black").css("background", "#333");
+        }
+    });
+});
+
+},{"./fetch":1,"./footer.js":2,"./nav":4}],4:[function(require,module,exports){
+"use strict";
 let $ = require('jquery');
-console.log("ready!");
+console.log("navbar ready!");
 
 
 // $(document).ready(function () {
@@ -153,87 +291,65 @@ const newNav =()=>{
     console.log("new nav");
     let theNav = `
         <header id="my-header">
+        <div class="navForm"></div>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         
+        <a class="navbar-brand" href="index.html"><strong><h1>Ornella</h1></strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link"  href="aman.html">Aman</a></li>
+                <li class="nav-item"><a class="nav-link" href="galler.html">gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="branch.html">Branches</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="central-nav">
+                         <a href="index.html"><img src="imgs/logoflower2.png" class="img-fluid" alt="ornella logo" width="100px"></a>
+                        <div class="orn">Ornella Multi-Media</div>
+                        <div class="creative">Creative Photographer and Videographer</div>
+             </div>
+             <span class="navbar-text m-2">
+            <div class="right-nav"> 
+            <div class="legend">Habesha Photographer & Videographer</div>
+            <div class="line"></div> 
+            <div class="follow"> follow me on social media </div>
+            <div class="icons">
+            <a href="https://twitter.com/amanzerumesfin"><img src="./../imgs/Twitterbirdw.png" width="25px" height="25px"/></a>
+            <a href="https://www.instagram.com/aman_zeru/"><img src="./../imgs/instagramw.png" width="25px" height="25px"/></a> 
+            <a href="https://www.facebook.com/begieZgreat/"><img src="./../imgs/facebookw.png" width="25px" height="25px"/></a>
+            </div>
+        </div>
+            </span>
+        </div>
+    </nav>
+
+    <div class="view intro-2" style="">
+        <div class="full-bg-img">
+            <div class="mask rgba-purple-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                     
+                </div>
+            </div>
+        </div>
+    </div>
         </header>
 `;
     $("#godaddy").html(theNav);
 };
-newNav();
 
 
-const footer = () => {
-    let footerh = `<div class="nav footer">
-                <div class="fi"><img src="./../imgs/logoflower2.png" alt="textlogo" width="150px"></div>
-                    <div class="footer2 text-center">
-                        <div class="f f1"><a href="#">Home</a><span>|</span></div>
-                        <div class="f"><a href="#">Aman</a><span>|</span></div>
-                        <div class="f"><a href="#">Gallery</a><span>|</span></div>
-                        <div class="f"><a href="#">Branches</a></div>
-                    </div> 
-                </div>`;
-    $("#footer").html(footerh);
-};
 
-footer();
 
-const lowerpart = () => {
-    // console.log("lower part of the page");
-    let thepart = `
-    <div class="d text-center">
-    <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
-    </div>
-    <div class="e"><img src="./../imgs/logodesign.png" alt="textlogo" width="250px"></div>
 
-    <div class="a tinone"><a href="aman.html"><div class="meet"><div class="met"></div></div><p class="textAman">Meet Aman</p></a></div>
-    <div class="b tinone"><a href="#!"><div class="gal"><div class="met"></div></div><p class="textAman">Gallery</p></a></div>
-    <div class="c tinone"><a href="#!"><img src="./../imgs/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
-    <div class="x tinone"><a href="#!"><img src="./../imgs/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
-    <div class="y tinone"><a href="#!"><img src="./../imgs/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
-    <div class="z tinone"><a href="#!"><img src="./../imgs/1plc.jpg" alt="spill" width="220px"><div class="met"></div><p class="textAman">Branches</p></a></div>
- 
-    `;
-    $(".threeIn1").html(thepart);
-};
-lowerpart();
-
-const lowerbranch = () => {
-    // console.log("lower part of the page");
-    let thepart = `
-    <div class="d text-center">
-    <p class="h">RECORDING <span>authentic</span>AND <span>intimate </span> TRADITIONAL WEDDINGS AS THEY ARE IN HOME</p>
-    </div>
-    <div class="e"><img src="./../imgs/logodesign.png" alt="textlogo" width="250px"></div>
-     `;
-    $(".threeIn2").html(thepart);
-};
-lowerbranch();
-
-$('.form-control').on('click', function (e) {
-    e.preventDefault();
-    $(this).css('border', '2px solid #b9b1a7');
-});
-
-$('.submit').on('click', function (e) {
-    e.preventDefault();
-    $(this).css('background-color', '#ece5e7');
-    $(this).css('color', 'rgb(138, 135, 135)');
-});
 module.exports = {
-    footer,
-    newNav,
-    lowerpart
-
-};
+    newNav
+  };
 
 
-},{"jquery":4}],3:[function(require,module,exports){
-"use strict";
-console.log("biet mekeyer");
-let page =require('./index');
-let  fetching=require('./fetch');
-
-// console.log("etl", fetching.loadOrnella);
-},{"./fetch":1,"./index":2}],4:[function(require,module,exports){
+},{"jquery":5}],5:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.4.0
  * https://jquery.com/
